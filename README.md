@@ -157,7 +157,3 @@ type ActionResult<Result> =
 
 - **Validation errors**: If the input values do not match the schema, `naction` returns a detailed error message specifying the invalid fields and their issues.
 - **Runtime errors**: Any error thrown during the execution of the action function is caught and returned with an error message.
-
-## License
-
-`naction` is licensed under the MIT License. See the LICENSE file for more details.
