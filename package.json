@@ -1,0 +1,48 @@
+{
+  "name": "naction",
+  "version": "0.0.1",
+  "description": "build next actions easily",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "dev": "tsx watch ./src/index.ts",
+    "build": "unbuild",
+    "lint": "pnpm biome check --write ./src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "react",
+    "next",
+    "zod",
+    "next-action",
+    "next-actions",
+    "nextjs",
+    "actions",
+    "validation",
+    "schema"
+  ],
+  "author": "Ogabek Yuldoshev <https://github.com/OgabekYuldoshev>",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.0",
+    "vitest": "^2.1.8",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "zod": "^3.24.1"
+  }
+}
