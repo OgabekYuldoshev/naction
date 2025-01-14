@@ -1,10 +1,9 @@
-<div align="start" style="display:flex; gap: 1rem">
-  <img src="naction.png" alt="naction" width="200" style="border-radius: 20px; flex-shrink: 0" />
-  <div>
-  <p>
-  <b>naction</b> is a lightweight library for managing server actions and schema-based validation in Next.js projects. It simplifies handling async operations and schema validation with zod, providing a clean and intuitive API.
-  </p>
-<div>
+
+<div align="center">
+  <img src="naction.png" alt="naction" width="400" style="border-radius: 12px" />
+</div>
+<h1 align="center">naction</h1>
+<div align="center">
   <a href="https://npmjs.org/package/naction">
     <img src="https://badgen.now.sh/npm/v/naction" alt="version" />
   </a>
@@ -15,8 +14,9 @@
     <img src="https://packagephobia.now.sh/badge?p=naction" alt="install size" />
   </a>
 </div>
-  </div>
-</div>
+<br />
+
+ <code>naction</code> is a lightweight library for managing server actions and schema-based validation in Next.js projects. It simplifies handling async operations and schema validation with zod, providing a clean and intuitive API.
 
 ## Features
 
