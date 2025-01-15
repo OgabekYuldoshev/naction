@@ -1,13 +1,16 @@
 {
   "name": "naction",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "build next actions easily",
   "type": "module",
   "scripts": {
-    "test": "vitest",
+    "preinstall": "npx only-allow pnpm",
+    "test": "vitest --watch false",
     "dev": "tsx watch ./src/index.ts",
     "build": "unbuild",
-    "lint": "pnpm biome check --write ./src"
+    "lint": "pnpm biome check --write ./src",
+    "ci": "pnpm build && yarn test",
+    "release": "pnpm run ci && pnpm changeset publish"
   },
   "exports": {
     ".": {
@@ -44,6 +47,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.27.11",
+    "simple-git-hooks": "^2.11.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "unbuild": "^3.3.0",
@@ -52,5 +56,8 @@
   },
   "peerDependencies": {
     "zod": "^3.24.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint"
   }
 }
